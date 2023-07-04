@@ -1,0 +1,6 @@
+README.md
+setup.py
+fairpy.egg-info/PKG-INFO
+fairpy.egg-info/SOURCES.txt
+fairpy.egg-info/dependency_links.txt
+fairpy.egg-info/top_level.txt

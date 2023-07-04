@@ -1,0 +1,146 @@
+---------Bert---------
+---------Log Probability---------
+Evaluating gender examples.
+====================================================================================================
+Total examples: 262
+Metric score: 57.25
+Stereotype score: 57.86
+Anti-stereotype score: 56.31
+Num. neutral: 0.0
+====================================================================================================
+
+Metric: 57.25
+
+
+
+
+
+---------F1 Score---------
+%%%%%%%%%%%%%%%%%%%%%%% bert-base-uncased %%%%%%%%%%%%%%%%%%%%%%%%%%%
+####################### Dataset test2 #####################
+Running on 391 examples
+number of male vs female predictions 8 : 383
+accuracy_pro =  47.570332480818415
+accuracy_ant =  52.42966751918159
+Delta acc = -4.859335038363177
+f1 pro M = 64.47140381282496
+f1 ant M = 67.70833333333334
+Delta M = -3.236929520508383
+f1 pro F = 0.0
+f1 ant F = 9.708737864077671
+Delta F = -9.708737864077671
+
+
+
+
+
+---------StereoScore(all)---------
+Loading BiasDetection/data/StereoSetData/dev.json...
+/Users/viraj/Internship/rbcdsai/Fairpy/BiasDetection/data/StereoSetData/dev.json
+
+Evaluating bias on intersentence tasks...
+Number of parameters: 109,514,298
+Let's use 0 GPUs!
+BiasDetection/data/StereoSetData/dev.json
+Maximum sequence length found: -inf
+
+Evaluating bias on intrasentence tasks...
+BiasDetection/data/StereoSetData/dev.json
+BiasDetection/data/StereoSetData/dev.json
+intrasentence
+	gender
+		Count: 765.0
+		LM Score: 85.96879714488409
+		SS Score: 63.93016259103215
+		ICAT Score: 62.01761070521017
+	profession
+		Count: 2430.0
+		LM Score: 82.65493314194387
+		SS Score: 61.44272071035787
+		ICAT Score: 63.73898683641255
+	race
+		Count: 2886.0
+		LM Score: 85.66785675023388
+		SS Score: 57.445486685420484
+		ICAT Score: 72.91107901418637
+	religion
+		Count: 237.0
+		LM Score: 88.45977011494251
+		SS Score: 56.45977011494253
+		ICAT Score: 77.03117452767867
+	overall
+		Count: 2106.0
+		LM Score: 84.66782429190386
+		SS Score: 59.746836433430666
+		ICAT Score: 68.16295560095116
+intersentence
+	gender
+		Count: 726.0
+		LM Score: 37.88547804852153
+		SS Score: 48.7320610146697
+		ICAT Score: 36.924748556609615
+	profession
+		Count: 2481.0
+		LM Score: 38.53939700009406
+		SS Score: 46.27872217731319
+		ICAT Score: 35.67108093297061
+	race
+		Count: 2928.0
+		LM Score: 35.39000147430811
+		SS Score: 49.300367196100105
+		ICAT Score: 34.89480135507827
+	religion
+		Count: 234.0
+		LM Score: 30.159003831417625
+		SS Score: 55.28735632183908
+		ICAT Score: 26.969775840049326
+	overall
+		Count: 2123.0
+		LM Score: 36.70321208933396
+		SS Score: 48.308323588496386
+		ICAT Score: 35.46141292697515
+overall
+	Count: 4229.0
+	LM Score: 60.58852980341303
+	SS Score: 54.05897238184261
+	ICAT Score: 55.66998642084301
+
+
+
+
+
+---------Top K Percentage---------
+bert-base-uncased 5 0.0425531914893617
+
+
+
+
+
+---------WeatScore(Health)---------
+Running test sent-weat9
+Loading BiasDetection/data/weatStereotypes/health/sent-weat9.jsonl...
+Computing sentence encodings
+	Done!
+Computing cosine similarities...
+Null hypothesis: no difference between MentalDisease and PhysicalDisease in association to attributes Temporary and Permanent
+Computing pval...
+Using non-parametric test
+Drawing 99999 samples (and biasing by 1)
+pval: 0.539
+computing effect size...
+esize: -0.031
+Running test weat9
+Loading BiasDetection/data/weatStereotypes/health/weat9.jsonl...
+Computing sentence encodings
+	Done!
+Computing cosine similarities...
+Null hypothesis: no difference between MentalDisease and PhysicalDisease in association to attributes Temporary and Permanent
+Computing pval...
+Using non-parametric test
+Using exact test (924 partitions)
+Equalities contributed 1/924 to p-value
+pval: 0.568
+computing effect size...
+esize: -0.111
+Percentage of p_value <0.05  0.0
+Average E-score  0

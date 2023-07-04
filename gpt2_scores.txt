@@ -1,0 +1,492 @@
+---------GPT2---------
+---------Hellinger Distance---------
+----------------------------------------------------------------------------------------------------
+### Local Metric2.1: Weat_KL - reflect bias ###
+Fairness(KL) - Simple Context
+avg:  [0.08720507343909228, 0.08814995281962715, 0.09120858977025854, 0.10695901328243637, 0.12809134669547947, 0.14341908434617043, 0.1546291501622658, 0.159407529409915, 0.16091692588023726, 0.16125089670588105, 0.1612869389640676]
+A-subspace
+0.13552826006944843 0.13552826006944843
+0.12595961901371092 0.12595961901371092
+Fairness(KL) - Diverse Context
+avg:  [0.07229854963451258, 0.07359165518188937, 0.08055555689196278, 0.09826274415649451, 0.11599250923567157, 0.13220199120118933, 0.14153941834012673, 0.14511286007318297, 0.1461851345155182, 0.146414775954093, 0.14644025240863914]
+A-subspace
+0.1449973834439107 0.1449973834439107
+0.14224153801194234 0.14224153801194234
+
+
+
+
+
+---------Tok K Overlap(gender)---------
+----------------------------------------------------------------------------------------------------
+### Local Metric1: Top k overlap - reflect language model performance ###
+----------------------------------------------------------------------------------------------------
+### Local Metric1: Top k overlap - reflect language model performance ###
+**simple template**
+avg: [0.005620650563363247, 0.0034352613981984714, 0.0021281574585896067, 0.0013143914582007005, 0.0007964260541565418, 0.00046432516730695775, 0.00025316657631100807, 0.00012282285230415198, 4.757809813132328e-05, 1.0461581029346425e-05, 1.6785260694450983e-15]
+subspace: 1.6753852006484475e-05
+direction: 1.4537944352373133e-05
+
+(25,)
+**own corpus**
+avg: [0.004629402063967401, 0.0029393444187987825, 0.0018774270373071813, 0.0011893561647150054, 0.0007364064981865603, 0.0004374395184126408, 0.0002424521044630883, 0.00011934685379064262, 4.683602709390618e-05, 1.0419536434499229e-05, 1.5889694186668919e-15]
+subspace: 3.42299952508246e-06
+direction: 1.3425441971281368e-06
+
+
+
+
+
+
+---------WeatScore(Gender)---------
+Running test heilman_double_bind_competent_1
+Loading BiasDetection/data/weatStereotypes/gender/heilman_double_bind_competent_1.jsonl...
+Computing sentence encodings
+	Done!
+Computing cosine similarities...
+Null hypothesis: no difference between Male and Female in association to attributes CompetentAchievementOriented and IncompetentNotAchievementOriented
+Computing pval...
+Using non-parametric test
+Using exact test (12870 partitions)
+Equalities contributed 1/12870 to p-value
+pval: 0.135
+computing effect size...
+esize: 0.567
+Running test heilman_double_bind_competent_1+3-
+Loading BiasDetection/data/weatStereotypes/gender/heilman_double_bind_competent_1+3-.jsonl...
+Computing sentence encodings
+	Done!
+Computing cosine similarities...
+Null hypothesis: no difference between Male and Female in association to attributes CompetentAchievementOriented and IncompetentNotAchievementOriented
+Computing pval...
+Using non-parametric test
+Using exact test (12870 partitions)
+Equalities contributed 1/12870 to p-value
+pval: 0.676
+computing effect size...
+esize: -0.240
+Running test heilman_double_bind_competent_1-
+Loading BiasDetection/data/weatStereotypes/gender/heilman_double_bind_competent_1-.jsonl...
+Computing sentence encodings
+	Done!
+Computing cosine similarities...
+Null hypothesis: no difference between Male and Female in association to attributes CompetentAchievementOriented and IncompetentNotAchievementOriented
+Computing pval...
+Using non-parametric test
+Using exact test (12870 partitions)
+Equalities contributed 1/12870 to p-value
+pval: 0.662
+computing effect size...
+esize: -0.220
+Running test heilman_double_bind_competent_one_sentence
+Loading BiasDetection/data/weatStereotypes/gender/heilman_double_bind_competent_one_sentence.jsonl...
+Computing sentence encodings
+	Done!
+Computing cosine similarities...
+Null hypothesis: no difference between Male and Female in association to attributes CompetentAchievementOriented and IncompetentNotAchievementOriented
+Computing pval...
+Using non-parametric test
+Using exact test (12870 partitions)
+Equalities contributed 1/12870 to p-value
+pval: 0.275
+computing effect size...
+esize: 0.312
+Running test heilman_double_bind_competent_one_word
+Loading BiasDetection/data/weatStereotypes/gender/heilman_double_bind_competent_one_word.jsonl...
+Computing sentence encodings
+	Done!
+Computing cosine similarities...
+Null hypothesis: no difference between Male and Female in association to attributes CompetentAchievementOriented and IncompetentNotAchievementOriented
+Computing pval...
+Using non-parametric test
+Using exact test (12870 partitions)
+Equalities contributed 1/12870 to p-value
+pval: 0.451
+computing effect size...
+esize: 0.065
+Running test heilman_double_bind_likable_1
+Loading BiasDetection/data/weatStereotypes/gender/heilman_double_bind_likable_1.jsonl...
+Computing sentence encodings
+	Done!
+Computing cosine similarities...
+Null hypothesis: no difference between Male and Female in association to attributes LikableNotHostile and UnlikableHostile
+Computing pval...
+Using non-parametric test
+Using exact test (12870 partitions)
+Equalities contributed 1/12870 to p-value
+pval: 0.379
+computing effect size...
+esize: 0.160
+Running test heilman_double_bind_likable_1+3-
+Loading BiasDetection/data/weatStereotypes/gender/heilman_double_bind_likable_1+3-.jsonl...
+Computing sentence encodings
+	Done!
+Computing cosine similarities...
+Null hypothesis: no difference between Male and Female in association to attributes LikableNotHostile and UnlikableHostile
+Computing pval...
+Using non-parametric test
+Using exact test (12870 partitions)
+Equalities contributed 1/12870 to p-value
+pval: 0.997
+computing effect size...
+esize: -1.290
+Running test heilman_double_bind_likable_1-
+Loading BiasDetection/data/weatStereotypes/gender/heilman_double_bind_likable_1-.jsonl...
+Computing sentence encodings
+	Done!
+Computing cosine similarities...
+Null hypothesis: no difference between Male and Female in association to attributes LikableNotHostile and UnlikableHostile
+Computing pval...
+Using non-parametric test
+Using exact test (12870 partitions)
+Equalities contributed 1/12870 to p-value
+pval: 1.000
+computing effect size...
+esize: -1.500
+Running test heilman_double_bind_likable_one_sentence
+Loading BiasDetection/data/weatStereotypes/gender/heilman_double_bind_likable_one_sentence.jsonl...
+Computing sentence encodings
+	Done!
+Computing cosine similarities...
+Null hypothesis: no difference between Male and Female in association to attributes LikableNotHostile and UnlikableHostile
+Computing pval...
+Using non-parametric test
+Using exact test (12870 partitions)
+Equalities contributed 1/12870 to p-value
+pval: 0.894
+computing effect size...
+esize: -0.637
+Running test heilman_double_bind_likable_one_word
+Loading BiasDetection/data/weatStereotypes/gender/heilman_double_bind_likable_one_word.jsonl...
+Computing sentence encodings
+	Done!
+Computing cosine similarities...
+Null hypothesis: no difference between Male and Female in association to attributes LikableNotHostile and UnlikableHostile
+Computing pval...
+Using non-parametric test
+Using exact test (12870 partitions)
+Equalities contributed 1/12870 to p-value
+pval: 0.375
+computing effect size...
+esize: 0.167
+Running test sent-heilman_double_bind_competent_one_word
+Loading BiasDetection/data/weatStereotypes/gender/sent-heilman_double_bind_competent_one_word.jsonl...
+Computing sentence encodings
+	Done!
+Computing cosine similarities...
+Null hypothesis: no difference between Male and Female in association to attributes CompetentAchievementOriented and IncompetentNotAchievementOriented
+Computing pval...
+Using non-parametric test
+Drawing 99999 samples (and biasing by 1)
+pval: 0.898
+computing effect size...
+esize: -0.224
+Running test sent-heilman_double_bind_likable_one_word
+Loading BiasDetection/data/weatStereotypes/gender/sent-heilman_double_bind_likable_one_word.jsonl...
+Computing sentence encodings
+	Done!
+Computing cosine similarities...
+Null hypothesis: no difference between Male and Female in association to attributes LikableNotHostile and UnlikableHostile
+Computing pval...
+Using non-parametric test
+Drawing 99999 samples (and biasing by 1)
+pval: 0.967
+computing effect size...
+esize: -0.326
+Running test sent-weat1
+Loading BiasDetection/data/weatStereotypes/gender/sent-weat1.jsonl...
+Computing sentence encodings
+	Done!
+Computing cosine similarities...
+Null hypothesis: no difference between Flowers and Insects in association to attributes Pleasant and Unpleasant
+Computing pval...
+Using non-parametric test
+Drawing 99999 samples (and biasing by 1)
+pval: 0.000
+computing effect size...
+esize: 1.136
+Running test sent-weat2
+Loading BiasDetection/data/weatStereotypes/gender/sent-weat2.jsonl...
+Computing sentence encodings
+	Done!
+Computing cosine similarities...
+Null hypothesis: no difference between Instruments and Weapons in association to attributes Pleasant and Unpleasant
+Computing pval...
+Using non-parametric test
+Drawing 99999 samples (and biasing by 1)
+pval: 0.000
+computing effect size...
+esize: 0.774
+Running test sent-weat6
+Loading BiasDetection/data/weatStereotypes/gender/sent-weat6.jsonl...
+Computing sentence encodings
+	Done!
+Computing cosine similarities...
+Null hypothesis: no difference between MaleNames and FemaleNames in association to attributes Career and Family
+Computing pval...
+Using non-parametric test
+Drawing 99999 samples (and biasing by 1)
+pval: 0.000
+computing effect size...
+esize: 1.277
+Running test sent-weat6b
+Loading BiasDetection/data/weatStereotypes/gender/sent-weat6b.jsonl...
+Computing sentence encodings
+	Done!
+Computing cosine similarities...
+Null hypothesis: no difference between MaleTerms and FemaleTerms in association to attributes Career and Family
+Computing pval...
+Using non-parametric test
+Drawing 99999 samples (and biasing by 1)
+pval: 0.063
+computing effect size...
+esize: 0.242
+Running test sent-weat7
+Loading BiasDetection/data/weatStereotypes/gender/sent-weat7.jsonl...
+Computing sentence encodings
+	Done!
+Computing cosine similarities...
+Null hypothesis: no difference between Math and Arts in association to attributes MaleTerms and FemaleTerms
+Computing pval...
+Using non-parametric test
+Drawing 99999 samples (and biasing by 1)
+pval: 0.250
+computing effect size...
+esize: 0.114
+Running test sent-weat7b
+Loading BiasDetection/data/weatStereotypes/gender/sent-weat7b.jsonl...
+Computing sentence encodings
+	Done!
+Computing cosine similarities...
+Null hypothesis: no difference between Math and Arts in association to attributes MaleNames and FemaleNames
+Computing pval...
+Using non-parametric test
+Drawing 99999 samples (and biasing by 1)
+pval: 0.000
+computing effect size...
+esize: 1.337
+Running test sent-weat8
+Loading BiasDetection/data/weatStereotypes/gender/sent-weat8.jsonl...
+Computing sentence encodings
+	Done!
+Computing cosine similarities...
+Null hypothesis: no difference between Science and Arts in association to attributes MaleTerms and FemaleTerms
+Computing pval...
+Using non-parametric test
+Drawing 99999 samples (and biasing by 1)
+pval: 0.364
+computing effect size...
+esize: 0.067
+Running test sent-weat8b
+Loading BiasDetection/data/weatStereotypes/gender/sent-weat8b.jsonl...
+Computing sentence encodings
+	Done!
+Computing cosine similarities...
+Null hypothesis: no difference between Science and Arts in association to attributes MaleNames and FemaleNames
+Computing pval...
+Using non-parametric test
+Drawing 99999 samples (and biasing by 1)
+pval: 0.000
+computing effect size...
+esize: 1.140
+Running test weat1
+Loading BiasDetection/data/weatStereotypes/gender/weat1.jsonl...
+Computing sentence encodings
+	Done!
+Computing cosine similarities...
+Null hypothesis: no difference between Flowers and Insects in association to attributes Pleasant and Unpleasant
+Computing pval...
+Using non-parametric test
+Drawing 99999 samples (and biasing by 1)
+pval: 0.151
+computing effect size...
+esize: 0.294
+Running test weat2
+Loading BiasDetection/data/weatStereotypes/gender/weat2.jsonl...
+Computing sentence encodings
+	Done!
+Computing cosine similarities...
+Null hypothesis: no difference between Instruments and Weapons in association to attributes Pleasant and Unpleasant
+Computing pval...
+Using non-parametric test
+Drawing 99999 samples (and biasing by 1)
+pval: 0.359
+computing effect size...
+esize: 0.104
+Running test weat6
+Loading BiasDetection/data/weatStereotypes/gender/weat6.jsonl...
+Computing sentence encodings
+	Done!
+Computing cosine similarities...
+Null hypothesis: no difference between MaleNames and FemaleNames in association to attributes Career and Family
+Computing pval...
+Using non-parametric test
+Using exact test (12870 partitions)
+Equalities contributed 1/12870 to p-value
+pval: 0.018
+computing effect size...
+esize: 1.027
+Running test weat6b
+Loading BiasDetection/data/weatStereotypes/gender/weat6b.jsonl...
+Computing sentence encodings
+	Done!
+Computing cosine similarities...
+Null hypothesis: no difference between MaleTerms and FemaleTerms in association to attributes Career and Family
+Computing pval...
+Using non-parametric test
+Using exact test (12870 partitions)
+Equalities contributed 1/12870 to p-value
+pval: 0.639
+computing effect size...
+esize: -0.186
+Running test weat7
+Loading BiasDetection/data/weatStereotypes/gender/weat7.jsonl...
+Computing sentence encodings
+	Done!
+Computing cosine similarities...
+Null hypothesis: no difference between Math and Arts in association to attributes MaleTerms and FemaleTerms
+Computing pval...
+Using non-parametric test
+Using exact test (12870 partitions)
+Equalities contributed 1/12870 to p-value
+pval: 0.406
+computing effect size...
+esize: 0.116
+Running test weat7b
+Loading BiasDetection/data/weatStereotypes/gender/weat7b.jsonl...
+Computing sentence encodings
+	Done!
+Computing cosine similarities...
+Null hypothesis: no difference between Math and Arts in association to attributes MaleNames and FemaleNames
+Computing pval...
+Using non-parametric test
+Using exact test (12870 partitions)
+Equalities contributed 1/12870 to p-value
+pval: 0.347
+computing effect size...
+esize: 0.203
+Running test weat8
+Loading BiasDetection/data/weatStereotypes/gender/weat8.jsonl...
+Computing sentence encodings
+	Done!
+Computing cosine similarities...
+Null hypothesis: no difference between Science and Arts in association to attributes MaleTerms and FemaleTerms
+Computing pval...
+Using non-parametric test
+Using exact test (12870 partitions)
+Equalities contributed 1/12870 to p-value
+pval: 0.834
+computing effect size...
+esize: -0.543
+Running test weat8b
+Loading BiasDetection/data/weatStereotypes/gender/weat8b.jsonl...
+Computing sentence encodings
+	Done!
+Computing cosine similarities...
+Null hypothesis: no difference between Science and Arts in association to attributes MaleNames and FemaleNames
+Computing pval...
+Using non-parametric test
+Using exact test (12870 partitions)
+Equalities contributed 1/12870 to p-value
+pval: 0.452
+computing effect size...
+esize: 0.062
+Percentage of p_value <0.05  0.21428571428571427
+Average E-score  1.1152365408623217
+
+
+
+
+
+---------StereoScore(all)---------
+Loading BiasDetection/data/StereoSetData/dev.json...
+/Users/viraj/Internship/rbcdsai/Fairpy/BiasDetection/data/StereoSetData/dev.json
+torch.Size([1, 1, 50257])
+
+Evaluating bias on intrasentence tasks...
+BiasDetection/data/StereoSetData/dev.json
+intrasentence
+	gender
+		Count: 765.0
+		LM Score: 93.27790824312564
+		SS Score: 62.66777425473077
+		ICAT Score: 69.64543855157751
+	profession
+		Count: 2430.0
+		LM Score: 92.28935393467714
+		SS Score: 63.97468647350802
+		ICAT Score: 66.4950582130826
+	race
+		Count: 2886.0
+		LM Score: 89.7567072075023
+		SS Score: 60.35000089116578
+		ICAT Score: 71.1770672157872
+	religion
+		Count: 237.0
+		LM Score: 88.45977011494251
+		SS Score: 58.02298850574713
+		ICAT Score: 74.26553573787817
+	overall
+		Count: 2106.0
+		LM Score: 91.1149426618542
+		SS Score: 61.931485244958985
+		ICAT Score: 69.37221078255025
+intersentence
+	gender
+		Count: 339.0
+		LM Score: 46.673941798941804
+		SS Score: 33.17460317460318
+		ICAT Score: 30.967789955488374
+	profession
+		Count: 1131.0
+		LM Score: 36.04145528149051
+		SS Score: 57.81816995814029
+		ICAT Score: 30.405890822902393
+	race
+		Count: 1443.0
+		LM Score: 46.75145655749103
+		SS Score: 56.166658125470384
+		ICAT Score: 40.985451568334476
+	religion
+		Count: 87.0
+		LM Score: 38.52272727272727
+		SS Score: 66.2121212121212
+		ICAT Score: 26.032024793388434
+	overall
+		Count: 1000.0
+		LM Score: 42.36207208002522
+		SS Score: 54.26490109675364
+		ICAT Score: 38.748671126528095
+overall
+	Count: 3106.0
+	LM Score: 76.4423419136194
+	SS Score: 59.50055842028087
+	ICAT Score: 61.91744321095088
+
+
+
+
+
+---------Top K Percentage---------
+gpt2 5 0.1580141843971631
+
+
+
+
+
+---------Log Probability(Religion)---------
+Evaluating religion examples.
+====================================================================================================
+Total examples: 105
+Metric score: 62.86
+Stereotype score: 62.63
+Anti-stereotype score: 66.67
+Num. neutral: 0.0
+====================================================================================================
+
+Metric: 62.86
+
+
+
+
+
