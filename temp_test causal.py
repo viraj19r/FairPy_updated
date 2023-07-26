@@ -21,9 +21,9 @@ import sys
 # maskedObj = BiasDetectionMetrics.MaskedLMBiasDetection(model_class='bert-base-uncased', use_pretrained=True, model = model, tokenizer =tokenizer)
 causalObj = BiasDetectionMetrics.CausalLMBiasDetection(model_class='gpt2')
 # causalObj.topKOverlap(bias_type='gender')
-causalObj.hellingerDistance()
+# causalObj.hellingerDistance()
 # causalObj.WeatScore(bias_type='gender')
-# causalObj.stereoSetScore(bias_type='all')
+causalObj.stereoSetScore(bias_type='all')
 # causalObj.topKPercentage()
 # causalObj.logProbability(bias_type='religion')
 

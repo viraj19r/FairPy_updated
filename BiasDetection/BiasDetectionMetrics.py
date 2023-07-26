@@ -36,6 +36,7 @@ from transformers import (
     DistilBertForMaskedLM, DistilBertTokenizer,
     RobertaForMaskedLM, RobertaTokenizer,
     AlbertForMaskedLM, AlbertTokenizer,
+
 )
 class LMBiasDetection(ABC):
     def __init__(self, model_class, model_path, write_to_file, use_pretrained):
@@ -297,16 +298,19 @@ class MaskedLMBiasDetection(LMBiasDetection):
         if('roberta' in model_class):
             self.MSK = '<mask>'
         
-        if('bert' not in model_class):
-            self.embedding = self.model.lm_head.weight.cpu().detach().numpy()
-            self.transformer = self.model.transformer
-        else:
-            if(model_class == 'bert-base-uncased'):
-                self.embedding = self.model.cls.predictions.decoder.weight.cpu().detach().numpy()
-                self.transformer = self.model.bert
-            elif(model_class == 'roberta-base'):
-                self.embedding = self.model.lm_head.decoder.weight.cpu().detach().numpy()
-                self.transformer = self.model.roberta
+        # if('bert' not in model_class):
+        #     self.embedding = self.model.lm_head.weight.cpu().detach().numpy()
+        #     self.transformer = self.model.transformer
+        # else:
+        #     if(model_class == 'bert-base-uncased'):
+        #         self.embedding = self.model.cls.predictions.decoder.weight.cpu().detach().numpy()
+        #         self.transformer = self.model.bert
+        #     elif(model_class == 'roberta-base'):
+        #         self.embedding = self.model.lm_head.decoder.weight.cpu().detach().numpy()
+        #         self.transformer = self.model.roberta
+        #     else:
+        self.embedding = self.model.cls.predictions.decoder.weight.cpu().detach().numpy()
+        self.transformer = self.model.bert
     
     def load_model(self, model_class, model_path, use_pretrained):
         if(use_pretrained == False):
