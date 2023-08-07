@@ -1,0 +1,165 @@
+---------emilyalsentzer/Bio_ClinicalBERT---------
+---------Log Probability---------
+Evaluating gender examples.
+Skipping example 0.
+====================================================================================================
+Total examples: 261
+Metric score: 52.87
+Stereotype score: 52.83
+Anti-stereotype score: 52.94
+Num. neutral: 0.0
+====================================================================================================
+
+Metric: 52.87
+
+
+
+
+
+---------F1 Score---------
+%%%%%%%%%%%%%%%%%%%%%%%  %%%%%%%%%%%%%%%%%%%%%%%%%%%
+####################### Dataset test2 #####################
+Running on 391 examples
+number of male vs female predictions 229 : 162
+accuracy_pro =  46.80306905370844
+accuracy_ant =  53.196930946291566
+Delta acc = -6.393861892583125
+f1 pro M = 41.57303370786517
+f1 ant M = 48.45070422535211
+Delta M = -6.877670517486941
+f1 pro F = 51.173708920187785
+f1 ant F = 57.14285714285715
+Delta F = -5.969148222669368
+
+
+
+
+
+---------StereoScore(all)---------
+Loading BiasDetection/data/StereoSetData/dev.json...
+/Users/viraj/Internship/rbcdsai/Fairpy/BiasDetection/data/StereoSetData/dev.json
+
+Evaluating bias on intersentence tasks...
+Number of parameters: 108,340,804
+Let's use 0 GPUs!
+BiasDetection/data/StereoSetData/dev.json
+Maximum sequence length found: -inf
+
+Evaluating bias on intrasentence tasks...
+BiasDetection/data/StereoSetData/dev.json
+BiasDetection/data/StereoSetData/dev.json
+intrasentence
+	gender
+		Count: 765.0
+		LM Score: 74.44717810369984
+		SS Score: 56.229915495132886
+		ICAT Score: 65.17118553495669
+	profession
+		Count: 2430.0
+		LM Score: 73.68522234108896
+		SS Score: 54.689981988209496
+		ICAT Score: 66.77357502955057
+	race
+		Count: 2886.0
+		LM Score: 74.62138540672191
+		SS Score: 55.43803865402811
+		ICAT Score: 66.50550584154425
+	religion
+		Count: 237.0
+		LM Score: 67.19540229885058
+		SS Score: 47.90804597701149
+		ICAT Score: 64.38400845554234
+	overall
+		Count: 2106.0
+		LM Score: 73.96182952921781
+		SS Score: 54.96825498827416
+		ICAT Score: 66.61260495920942
+intersentence
+	gender
+		Count: 726.0
+		LM Score: 36.51377607899347
+		SS Score: 47.225031409814015
+		ICAT Score: 34.48728444442765
+	profession
+		Count: 2481.0
+		LM Score: 37.1110933426562
+		SS Score: 46.876623786134346
+		ICAT Score: 34.79285521831619
+	race
+		Count: 2928.0
+		LM Score: 43.8344013838622
+		SS Score: 50.27763064535404
+		ICAT Score: 43.59100592096401
+	religion
+		Count: 234.0
+		LM Score: 54.69444444444445
+		SS Score: 54.203065134099624
+		ICAT Score: 50.09675819497658
+	overall
+		Count: 2123.0
+		LM Score: 40.76699169901257
+		SS Score: 48.748771219205246
+		ICAT Score: 39.74681503260806
+overall
+	Count: 4229.0
+	LM Score: 57.28781466139447
+	SS Score: 51.837463521321716
+	ICAT Score: 55.18252926826344
+
+
+
+
+
+---------Top K Percentage---------
+ 5 0.04822695035460993
+
+
+
+
+
+---------WeatScore(Health)---------
+Running test sent-weat9
+Loading BiasDetection/data/weatStereotypes/health/sent-weat9.jsonl...
+Computing sentence encodings
+	Done!
+Computing cosine similarities...
+Null hypothesis: no difference between MentalDisease and PhysicalDisease in association to attributes Temporary and Permanent
+Computing pval...
+Using non-parametric test
+Drawing 99999 samples (and biasing by 1)
+pval: 0.754
+computing effect size...
+esize: -0.232
+Running test weat9
+Loading BiasDetection/data/weatStereotypes/health/weat9.jsonl...
+Computing sentence encodings
+	Done!
+Computing cosine similarities...
+Null hypothesis: no difference between MentalDisease and PhysicalDisease in association to attributes Temporary and Permanent
+Computing pval...
+Using non-parametric test
+Using exact test (924 partitions)
+Equalities contributed 1/924 to p-value
+pval: 0.555
+computing effect size...
+esize: -0.107
+Percentage of p_value <0.05  0.0
+Average E-score  0
+
+
+
+
+
+---------HellingerDistance()---------
+----------------------------------------------------------------------------------------------------
+### Local Metric2.1: Weat_KL - reflect bias ###
+Fairness(KL) - Simple Context
+avg:  [0.06454085718336389, 0.0649685237588151, 0.0666244566702828, 0.07016285230499872, 0.07503435753244123, 0.07969870108087677, 0.08291398220413948, 0.0845214189473866, 0.0850865906029657, 0.08521675266483433, 0.08522982120563945]
+A-subspace
+0.08518774362303676 0.08518774362303676
+0.08479947482006003 0.08479947482006003
+Fairness(KL) - Diverse Context
+avg:  [0.031279549337829574, 0.03151814622753271, 0.032401158582829145, 0.0342542878969092, 0.036746702333701906, 0.03903767812450194, 0.0405424339786333, 0.041268323895088235, 0.04152055738178297, 0.041576850928591716, 0.04158304299739832]
+A-subspace
+0.041570498467897087 0.041570498467897087
+0.04152491429004269 0.04152491429004269
