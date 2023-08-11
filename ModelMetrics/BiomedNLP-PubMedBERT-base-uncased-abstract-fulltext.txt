@@ -1,4 +1,4 @@
----------emilyalsentzer/Bio_Discharge_Summary_BERT---------
+---------microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext---------
 ---------Log Probability(gender)---------
 Evaluating gender examples.
 Skipping example 0.

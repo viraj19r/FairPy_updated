@@ -84,8 +84,8 @@ import BiasDetection.BiasDetectionMetrics as BiasDetectionMetrics
 
 # Load model directly
 from transformers import AutoModel, AutoModelForSequenceClassification
-from transformers import AutoTokenizer
-from transformers import BertForMaskedLM
+from transformers import AutoTokenizer, BioGptTokenizer,BertForMaskedLM
+from transformers import AutoTokenizer, GPT2LMHeadModel
 
 # model = AutoModel.from_pretrained("microsoft/BiomedNLP-KRISSBERT-PubMed-UMLS-EL")
 # tokenizer = AutoTokenizer.from_pretrained("microsoft/BiomedNLP-KRISSBERT-PubMed-UMLS-EL")
@@ -103,8 +103,12 @@ def masked_model_metrics(model_name):
     model = BertForMaskedLM.from_pretrained("emilyalsentzer/Bio_ClinicalBERT")
     maskedObj = BiasDetectionMetrics.MaskedLMBiasDetection(use_pretrained=False, model = model, tokenizer = tokenizer)
 
-    print('---------Log Probability---------')
+    print('---------Log Probability(gender)---------')
     maskedObj.logProbability(bias_type='gender')
+    print('---------Log Probability(religion)---------')
+    maskedObj.logProbability(bias_type='religion')
+    print('---------Log Probability(Race)---------')
+    maskedObj.logProbability(bias_type='race')
     print()
     print()
     print()
@@ -133,12 +137,21 @@ def masked_model_metrics(model_name):
     print()
     print('---------WeatScore(Health)---------')
     maskedObj.WeatScore(bias_type='health')
+    print('---------WeatScore(Age)---------')
+    maskedObj.WeatScore(bias_type='age')
+    print('---------WeatScore(Gender)---------')
+    maskedObj.WeatScore(bias_type='gender')
+    print('---------WeatScore(Race)---------')
+    maskedObj.WeatScore(bias_type='race')
+    print('---------WeatScore(Religion)---------')
+    maskedObj.WeatScore(bias_type='religion')
+    print('')
     print()
     print()
     print()
     print()
     print()
-    print('---------HellingerDistance()---------')
+    print('---------HellingerDistance(Gender)---------')
     maskedObj.hellingerDistance()
 
 
@@ -147,18 +160,18 @@ def causal_model_metrics(model_name):
     print('---------'+model_name+'---------')
 
     tokenizer = AutoTokenizer.from_pretrained(model_name)
-    model = AutoModelForSequenceClassification.from_pretrained(model_name)
+    model = GPT2LMHeadModel.from_pretrained(model_name).to('mps')
     causalObj = BiasDetectionMetrics.CausalLMBiasDetection(use_pretrained=False, model = model, tokenizer = tokenizer)
 
-    print('---------Hellinger Distance---------')
-    causalObj.hellingerDistance()
-    print()
-    print()
-    print()
-    print()
-    print()
-    print('---------Tok K Overlap(gender)---------')
-    causalObj.topKOverlap(bias_type='gender')
+    # print('---------Hellinger Distance---------')
+    # causalObj.hellingerDistance()
+    # print()
+    # print()
+    # print()
+    # print()
+    # print()
+    # print('---------Tok K Overlap(gender)---------')
+    # causalObj.topKOverlap(bias_type='gender')
     print()
     print()
     print()
@@ -196,4 +209,7 @@ def causal_model_metrics(model_name):
 
 
 # masked_model_metrics("emilyalsentzer/Bio_ClinicalBERT")
-masked_model_metrics("emilyalsentzer/Bio_Discharge_Summary_BERT")
+# masked_model_metrics("emilyalsentzer/Bio_Discharge_Summary_BERT")
+# masked_model_metrics("microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract")
+masked_model_metrics("microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext")
+# causal_model_metrics("microsoft/biogpt")

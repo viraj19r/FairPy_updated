@@ -35,7 +35,7 @@ from transformers import (
     BertForMaskedLM, BertTokenizer,
     DistilBertForMaskedLM, DistilBertTokenizer,
     RobertaForMaskedLM, RobertaTokenizer,
-    AlbertForMaskedLM, AlbertTokenizer,
+    AlbertForMaskedLM, AlbertTokenizer
 
 )
 class LMBiasDetection(ABC):
@@ -79,26 +79,27 @@ class CausalLMBiasDetection(LMBiasDetection):
             self.model = model
             self.tokenizer = tokenizer
         #self.stereoSet = generativeBiasEval(self.model, self.device, tokenizer = self.tokenizer, input_file=sys.path[1]+'StereoSet/data/dev.json')
-        if('xlnet' in model_class):
-            self.embedding = self.model.lm_loss.weight.cpu().detach().numpy()
-            self.transformer = self.model.transformer
-        elif('xlm' in model_class):
-            self.embedding = self.model.pred_layer.proj.weight.cpu().detach().numpy()
-            self.transformer = self.model.transformer
-        elif('transfo' in model_class):
-            self.embedding = self.model.crit.out_layers[3].weight.cpu().detach().numpy()
-            self.transformer = self.model.transformer
-        elif('bert' not in model_class):
-            self.embedding = self.model.lm_head.weight.cpu().detach().numpy()
-            self.transformer = self.model.transformer
-        else:
-            if(model_class == 'bert-base-uncased'):
-                self.embedding = self.model.cls.predictions.decoder.weight.cpu().detach().numpy()
-                self.transformer = self.model.bert
-            elif(model_class == 'roberta-base'):
-                self.embedding = self.model.lm_head.decoder.weight.cpu().detach().numpy()
-                self.transformer = self.model.roberta
-
+        # if('xlnet' in model_class):
+        #     self.embedding = self.model.lm_loss.weight.cpu().detach().numpy()
+        #     self.transformer = self.model.transformer
+        # elif('xlm' in model_class):
+        #     self.embedding = self.model.pred_layer.proj.weight.cpu().detach().numpy()
+        #     self.transformer = self.model.transformer
+        # elif('transfo' in model_class):
+        #     self.embedding = self.model.crit.out_layers[3].weight.cpu().detach().numpy()
+        #     self.transformer = self.model.transformer
+        # elif('bert' not in model_class):
+        #     self.embedding = self.model.lm_head.weight.cpu().detach().numpy()
+        #     self.transformer = self.model.transformer
+        # else:
+        #     if(model_class == 'bert-base-uncased'):
+        #         self.embedding = self.model.cls.predictions.decoder.weight.cpu().detach().numpy()
+        #         self.transformer = self.model.bert
+        #     elif(model_class == 'roberta-base'):
+        #         self.embedding = self.model.lm_head.decoder.weight.cpu().detach().numpy()
+        #         self.transformer = self.model.roberta
+        self.embedding = self.model.lm_head.weight.cpu().detach().numpy()
+        self.transformer = self.model.transformer
     def load_model(self, model_class, model_path, use_pretrained):
         if(use_pretrained == False):
             use_pretrained = True # Need to figure out how to load custom tokenizers that work with custom models. 
@@ -311,6 +312,7 @@ class MaskedLMBiasDetection(LMBiasDetection):
         #     else:
         self.embedding = self.model.cls.predictions.decoder.weight.cpu().detach().numpy()
         self.transformer = self.model.bert
+
     
     def load_model(self, model_class, model_path, use_pretrained):
         if(use_pretrained == False):
