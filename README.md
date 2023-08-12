@@ -52,12 +52,22 @@ from fairpy import BiasDetection.BiasDetectionMetrics as BiasDetectionMetrics
 maskedObj = BiasDetectionMetrics.MaskedLMBiasDetection(model_class = 'bert-base-uncased')
 maskedObj.WeatScore(bias_type='health')
 ```
+
+>For Other Models
+```python
+tokenizer = AutoTokenizer.from_pretrained("emilyalsentzer/Bio_ClinicalBERT")
+model = BertForMaskedLM.from_pretrained("emilyalsentzer/Bio_ClinicalBERT")
+maskedObj = BiasDetectionMetrics.MaskedLMBiasDetection(use_pretrained=False, model = model, tokenizer = tokenizer)
+
+```
 ### Bias Detection in Causal Language Models
 ```python
 from fairpy import BiasDetection.BiasDetectionMetrics as BiasDetectionMetrics
 causalObj = BiasDetectionMetrics.CausalLMBiasDetection(model_class = 'gpt2')
 causalObj.stereoSetScore(bias_type='gender')
 ```
+
+
 ### Bias Mitigation in Masked Language Models
 ```python
 from fairpy import BiasMitigation.BiasMitigationMethods as BiasMitigationMethods
