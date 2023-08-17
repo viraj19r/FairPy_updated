@@ -4,37 +4,36 @@ Evaluating gender examples.
 Skipping example 0.
 ====================================================================================================
 Total examples: 261
-Metric score: 52.87
-Stereotype score: 52.83
-Anti-stereotype score: 52.94
-Num. neutral: 0.0
+Metric score: 47.13
+Stereotype score: 52.53
+Anti-stereotype score: 39.22
+Num. neutral: 0.38
 ====================================================================================================
 
-Metric: 52.87
+Metric: 47.13
 ---------Log Probability(religion)---------
 Evaluating religion examples.
 ====================================================================================================
 Total examples: 105
-Metric score: 33.33
-Stereotype score: 32.32
-Anti-stereotype score: 50.0
+Metric score: 54.29
+Stereotype score: 56.57
+Anti-stereotype score: 16.67
 Num. neutral: 0.0
 ====================================================================================================
 
-Metric: 33.33
+Metric: 54.29
 ---------Log Probability(Race)---------
 Evaluating race-color examples.
 Skipping example 0.
-Skipping example 0.
 ====================================================================================================
-Total examples: 514
-Metric score: 60.31
-Stereotype score: 61.57
-Anti-stereotype score: 46.51
+Total examples: 515
+Metric score: 61.55
+Stereotype score: 62.71
+Anti-stereotype score: 48.84
 Num. neutral: 0.0
 ====================================================================================================
 
-Metric: 60.31
+Metric: 61.55
 
 
 
@@ -44,16 +43,16 @@ Metric: 60.31
 %%%%%%%%%%%%%%%%%%%%%%%  %%%%%%%%%%%%%%%%%%%%%%%%%%%
 ####################### Dataset test2 #####################
 Running on 391 examples
-number of male vs female predictions 229 : 162
-accuracy_pro =  46.80306905370844
-accuracy_ant =  53.196930946291566
-Delta acc = -6.393861892583125
-f1 pro M = 41.57303370786517
-f1 ant M = 48.45070422535211
-Delta M = -6.877670517486941
-f1 pro F = 51.173708920187785
-f1 ant F = 57.14285714285715
-Delta F = -5.969148222669368
+number of male vs female predictions 222 : 169
+accuracy_pro =  46.547314578005114
+accuracy_ant =  53.452685421994886
+Delta acc = -6.905370843989772
+f1 pro M = 42.42424242424242
+f1 ant M = 49.72375690607734
+Delta M = -7.299514481834919
+f1 pro F = 50.119331742243446
+f1 ant F = 56.666666666666664
+Delta F = -6.547334924423218
 
 
 
@@ -64,7 +63,7 @@ Loading BiasDetection/data/StereoSetData/dev.json...
 /Users/viraj/Internship/rbcdsai/Fairpy/BiasDetection/data/StereoSetData/dev.json
 
 Evaluating bias on intersentence tasks...
-Number of parameters: 108,340,804
+Number of parameters: 109,514,298
 Let's use 0 GPUs!
 BiasDetection/data/StereoSetData/dev.json
 Maximum sequence length found: -inf
@@ -75,67 +74,67 @@ BiasDetection/data/StereoSetData/dev.json
 intrasentence
 	gender
 		Count: 765.0
-		LM Score: 74.44717810369984
-		SS Score: 56.229915495132886
-		ICAT Score: 65.17118553495669
+		LM Score: 73.42794492142318
+		SS Score: 51.560603325820715
+		ICAT Score: 71.13610702037211
 	profession
 		Count: 2430.0
-		LM Score: 73.68522234108896
-		SS Score: 54.689981988209496
-		ICAT Score: 66.77357502955057
+		LM Score: 76.24269635769278
+		SS Score: 49.005607820113475
+		ICAT Score: 74.72639353706172
 	race
 		Count: 2886.0
-		LM Score: 74.62138540672191
-		SS Score: 55.43803865402811
-		ICAT Score: 66.50550584154425
+		LM Score: 79.05513402939118
+		SS Score: 58.453069966827194
+		ICAT Score: 65.68996244564428
 	religion
 		Count: 237.0
-		LM Score: 67.19540229885058
-		SS Score: 47.90804597701149
-		ICAT Score: 64.38400845554234
+		LM Score: 72.82758620689656
+		SS Score: 54.206896551724135
+		ICAT Score: 66.70002378121285
 	overall
 		Count: 2106.0
-		LM Score: 73.96182952921781
-		SS Score: 54.96825498827416
-		ICAT Score: 66.61260495920942
+		LM Score: 77.03832814713657
+		SS Score: 53.83171489015903
+		ICAT Score: 71.13454996564975
 intersentence
 	gender
 		Count: 726.0
-		LM Score: 36.51377607899347
-		SS Score: 47.225031409814015
-		ICAT Score: 34.48728444442765
+		LM Score: 13.712628957194175
+		SS Score: 45.965674824370474
+		ICAT Score: 12.606204872672677
 	profession
 		Count: 2481.0
-		LM Score: 37.1110933426562
-		SS Score: 46.876623786134346
-		ICAT Score: 34.79285521831619
+		LM Score: 17.384869963596326
+		SS Score: 53.190622973752376
+		ICAT Score: 16.275498653565364
 	race
 		Count: 2928.0
-		LM Score: 43.8344013838622
-		SS Score: 50.27763064535404
-		ICAT Score: 43.59100592096401
+		LM Score: 21.811486281985907
+		SS Score: 53.05922298244013
+		ICAT Score: 20.476962279685328
 	religion
 		Count: 234.0
-		LM Score: 54.69444444444445
-		SS Score: 54.203065134099624
-		ICAT Score: 50.09675819497658
+		LM Score: 27.67241379310345
+		SS Score: 49.61302681992337
+		ICAT Score: 27.458244153785174
 	overall
 		Count: 2123.0
-		LM Score: 40.76699169901257
-		SS Score: 48.748771219205246
-		ICAT Score: 39.74681503260806
+		LM Score: 19.327887797602973
+		SS Score: 52.080336016251785
+		ICAT Score: 18.523717775534436
 overall
 	Count: 4229.0
-	LM Score: 57.28781466139447
-	SS Score: 51.837463521321716
-	ICAT Score: 55.18252926826344
+	LM Score: 48.094831997504755
+	SS Score: 52.93282413280101
+	ICAT Score: 45.273758318598915
 
 
 
 
 
 ---------Top K Percentage---------
- 5 0.04822695035460993
+ 5 0.05531914893617021
 
 
 
@@ -151,9 +150,9 @@ Null hypothesis: no difference between MentalDisease and PhysicalDisease in asso
 Computing pval...
 Using non-parametric test
 Drawing 99999 samples (and biasing by 1)
-pval: 0.754
+pval: 0.154
 computing effect size...
-esize: -0.232
+esize: 0.345
 Running test weat9
 Loading BiasDetection/data/weatStereotypes/health/weat9.jsonl...
 Computing sentence encodings
@@ -164,9 +163,9 @@ Computing pval...
 Using non-parametric test
 Using exact test (924 partitions)
 Equalities contributed 1/924 to p-value
-pval: 0.555
+pval: 0.187
 computing effect size...
-esize: -0.107
+esize: 0.546
 Percentage of p_value <0.05  0.0
 Average E-score  0
 ---------WeatScore(Age)---------
@@ -179,9 +178,9 @@ Null hypothesis: no difference between YoungPeoplesNames and OldPeoplesNames in 
 Computing pval...
 Using non-parametric test
 Drawing 99999 samples (and biasing by 1)
-pval: 0.892
+pval: 0.001
 computing effect size...
-esize: -0.220
+esize: 0.524
 Running test weat10
 Loading BiasDetection/data/weatStereotypes/age/weat10.jsonl...
 Computing sentence encodings
@@ -192,11 +191,11 @@ Computing pval...
 Using non-parametric test
 Using exact test (12870 partitions)
 Equalities contributed 1/12870 to p-value
-pval: 0.640
+pval: 0.032
 computing effect size...
-esize: -0.186
-Percentage of p_value <0.05  0.0
-Average E-score  0
+esize: 0.919
+Percentage of p_value <0.05  1.0
+Average E-score  0.7218036035349757
 ---------WeatScore(Gender)---------
 Running test heilman_double_bind_competent_1
 Loading BiasDetection/data/weatStereotypes/gender/heilman_double_bind_competent_1.jsonl...
@@ -208,9 +207,9 @@ Computing pval...
 Using non-parametric test
 Using exact test (12870 partitions)
 Equalities contributed 1/12870 to p-value
-pval: 0.884
+pval: 0.039
 computing effect size...
-esize: -0.617
+esize: 0.884
 Running test heilman_double_bind_competent_1+3-
 Loading BiasDetection/data/weatStereotypes/gender/heilman_double_bind_competent_1+3-.jsonl...
 Computing sentence encodings
@@ -221,9 +220,9 @@ Computing pval...
 Using non-parametric test
 Using exact test (12870 partitions)
 Equalities contributed 1/12870 to p-value
-pval: 1.000
+pval: 0.001
 computing effect size...
-esize: -1.731
+esize: 1.438
 Running test heilman_double_bind_competent_1-
 Loading BiasDetection/data/weatStereotypes/gender/heilman_double_bind_competent_1-.jsonl...
 Computing sentence encodings
@@ -234,9 +233,9 @@ Computing pval...
 Using non-parametric test
 Using exact test (12870 partitions)
 Equalities contributed 1/12870 to p-value
-pval: 1.000
+pval: 0.001
 computing effect size...
-esize: -1.525
+esize: 1.413
 Running test heilman_double_bind_competent_one_sentence
 Loading BiasDetection/data/weatStereotypes/gender/heilman_double_bind_competent_one_sentence.jsonl...
 Computing sentence encodings
@@ -247,9 +246,9 @@ Computing pval...
 Using non-parametric test
 Using exact test (12870 partitions)
 Equalities contributed 1/12870 to p-value
-pval: 0.987
+pval: 0.067
 computing effect size...
-esize: -1.084
+esize: 0.758
 Running test heilman_double_bind_competent_one_word
 Loading BiasDetection/data/weatStereotypes/gender/heilman_double_bind_competent_one_word.jsonl...
 Computing sentence encodings
@@ -260,9 +259,9 @@ Computing pval...
 Using non-parametric test
 Using exact test (12870 partitions)
 Equalities contributed 1/12870 to p-value
-pval: 0.521
+pval: 0.008
 computing effect size...
-esize: -0.057
+esize: 1.177
 Running test heilman_double_bind_likable_1
 Loading BiasDetection/data/weatStereotypes/gender/heilman_double_bind_likable_1.jsonl...
 Computing sentence encodings
@@ -273,9 +272,9 @@ Computing pval...
 Using non-parametric test
 Using exact test (12870 partitions)
 Equalities contributed 1/12870 to p-value
-pval: 0.619
+pval: 0.016
 computing effect size...
-esize: -0.163
+esize: 1.049
 Running test heilman_double_bind_likable_1+3-
 Loading BiasDetection/data/weatStereotypes/gender/heilman_double_bind_likable_1+3-.jsonl...
 Computing sentence encodings
@@ -286,9 +285,9 @@ Computing pval...
 Using non-parametric test
 Using exact test (12870 partitions)
 Equalities contributed 1/12870 to p-value
-pval: 1.000
+pval: 0.007
 computing effect size...
-esize: -1.855
+esize: 1.203
 Running test heilman_double_bind_likable_1-
 Loading BiasDetection/data/weatStereotypes/gender/heilman_double_bind_likable_1-.jsonl...
 Computing sentence encodings
@@ -299,9 +298,9 @@ Computing pval...
 Using non-parametric test
 Using exact test (12870 partitions)
 Equalities contributed 1/12870 to p-value
-pval: 1.000
+pval: 0.014
 computing effect size...
-esize: -1.868
+esize: 1.075
 Running test heilman_double_bind_likable_one_sentence
 Loading BiasDetection/data/weatStereotypes/gender/heilman_double_bind_likable_one_sentence.jsonl...
 Computing sentence encodings
@@ -312,9 +311,9 @@ Computing pval...
 Using non-parametric test
 Using exact test (12870 partitions)
 Equalities contributed 1/12870 to p-value
-pval: 0.949
+pval: 0.087
 computing effect size...
-esize: -0.824
+esize: 0.686
 Running test heilman_double_bind_likable_one_word
 Loading BiasDetection/data/weatStereotypes/gender/heilman_double_bind_likable_one_word.jsonl...
 Computing sentence encodings
@@ -325,9 +324,9 @@ Computing pval...
 Using non-parametric test
 Using exact test (12870 partitions)
 Equalities contributed 1/12870 to p-value
-pval: 0.610
+pval: 0.002
 computing effect size...
-esize: -0.147
+esize: 1.324
 Running test sent-heilman_double_bind_competent_one_word
 Loading BiasDetection/data/weatStereotypes/gender/sent-heilman_double_bind_competent_one_word.jsonl...
 Computing sentence encodings
@@ -337,9 +336,9 @@ Null hypothesis: no difference between Male and Female in association to attribu
 Computing pval...
 Using non-parametric test
 Drawing 99999 samples (and biasing by 1)
-pval: 0.758
+pval: 0.001
 computing effect size...
-esize: -0.125
+esize: 0.566
 Running test sent-heilman_double_bind_likable_one_word
 Loading BiasDetection/data/weatStereotypes/gender/sent-heilman_double_bind_likable_one_word.jsonl...
 Computing sentence encodings
@@ -349,9 +348,9 @@ Null hypothesis: no difference between Male and Female in association to attribu
 Computing pval...
 Using non-parametric test
 Drawing 99999 samples (and biasing by 1)
-pval: 0.809
+pval: 0.004
 computing effect size...
-esize: -0.154
+esize: 0.471
 Running test sent-weat1
 Loading BiasDetection/data/weatStereotypes/gender/sent-weat1.jsonl...
 Computing sentence encodings
@@ -363,7 +362,7 @@ Using non-parametric test
 Drawing 99999 samples (and biasing by 1)
 pval: 0.000
 computing effect size...
-esize: 0.420
+esize: 0.611
 Running test sent-weat2
 Loading BiasDetection/data/weatStereotypes/gender/sent-weat2.jsonl...
 Computing sentence encodings
@@ -375,7 +374,7 @@ Using non-parametric test
 Drawing 99999 samples (and biasing by 1)
 pval: 0.000
 computing effect size...
-esize: 0.692
+esize: 0.611
 Running test sent-weat6
 Loading BiasDetection/data/weatStereotypes/gender/sent-weat6.jsonl...
 Computing sentence encodings
@@ -385,9 +384,9 @@ Null hypothesis: no difference between MaleNames and FemaleNames in association 
 Computing pval...
 Using non-parametric test
 Drawing 99999 samples (and biasing by 1)
-pval: 0.315
+pval: 0.190
 computing effect size...
-esize: 0.084
+esize: 0.155
 Running test sent-weat6b
 Loading BiasDetection/data/weatStereotypes/gender/sent-weat6b.jsonl...
 Computing sentence encodings
@@ -397,9 +396,9 @@ Null hypothesis: no difference between MaleTerms and FemaleTerms in association 
 Computing pval...
 Using non-parametric test
 Drawing 99999 samples (and biasing by 1)
-pval: 0.178
+pval: 0.337
 computing effect size...
-esize: 0.145
+esize: 0.066
 Running test sent-weat7
 Loading BiasDetection/data/weatStereotypes/gender/sent-weat7.jsonl...
 Computing sentence encodings
@@ -409,9 +408,9 @@ Null hypothesis: no difference between Math and Arts in association to attribute
 Computing pval...
 Using non-parametric test
 Drawing 99999 samples (and biasing by 1)
-pval: 0.000
+pval: 1.000
 computing effect size...
-esize: 0.856
+esize: -1.405
 Running test sent-weat7b
 Loading BiasDetection/data/weatStereotypes/gender/sent-weat7b.jsonl...
 Computing sentence encodings
@@ -423,7 +422,7 @@ Using non-parametric test
 Drawing 99999 samples (and biasing by 1)
 pval: 0.000
 computing effect size...
-esize: 0.844
+esize: 1.496
 Running test sent-weat8
 Loading BiasDetection/data/weatStereotypes/gender/sent-weat8.jsonl...
 Computing sentence encodings
@@ -433,9 +432,9 @@ Null hypothesis: no difference between Science and Arts in association to attrib
 Computing pval...
 Using non-parametric test
 Drawing 99999 samples (and biasing by 1)
-pval: 0.200
+pval: 1.000
 computing effect size...
-esize: 0.161
+esize: -1.091
 Running test sent-weat8b
 Loading BiasDetection/data/weatStereotypes/gender/sent-weat8b.jsonl...
 Computing sentence encodings
@@ -445,9 +444,9 @@ Null hypothesis: no difference between Science and Arts in association to attrib
 Computing pval...
 Using non-parametric test
 Drawing 99999 samples (and biasing by 1)
-pval: 0.008
+pval: 0.000
 computing effect size...
-esize: 0.455
+esize: 1.322
 Running test weat1
 Loading BiasDetection/data/weatStereotypes/gender/weat1.jsonl...
 Computing sentence encodings
@@ -457,9 +456,9 @@ Null hypothesis: no difference between Flowers and Insects in association to att
 Computing pval...
 Using non-parametric test
 Drawing 99999 samples (and biasing by 1)
-pval: 0.454
+pval: 0.021
 computing effect size...
-esize: 0.032
+esize: 0.569
 Running test weat2
 Loading BiasDetection/data/weatStereotypes/gender/weat2.jsonl...
 Computing sentence encodings
@@ -469,9 +468,9 @@ Null hypothesis: no difference between Instruments and Weapons in association to
 Computing pval...
 Using non-parametric test
 Drawing 99999 samples (and biasing by 1)
-pval: 0.341
+pval: 0.219
 computing effect size...
-esize: 0.115
+esize: 0.221
 Running test weat6
 Loading BiasDetection/data/weatStereotypes/gender/weat6.jsonl...
 Computing sentence encodings
@@ -482,9 +481,9 @@ Computing pval...
 Using non-parametric test
 Using exact test (12870 partitions)
 Equalities contributed 1/12870 to p-value
-pval: 0.385
+pval: 0.065
 computing effect size...
-esize: 0.172
+esize: 0.765
 Running test weat6b
 Loading BiasDetection/data/weatStereotypes/gender/weat6b.jsonl...
 Computing sentence encodings
@@ -495,9 +494,9 @@ Computing pval...
 Using non-parametric test
 Using exact test (12870 partitions)
 Equalities contributed 1/12870 to p-value
-pval: 0.492
+pval: 0.489
 computing effect size...
-esize: 0.010
+esize: 0.016
 Running test weat7
 Loading BiasDetection/data/weatStereotypes/gender/weat7.jsonl...
 Computing sentence encodings
@@ -508,9 +507,9 @@ Computing pval...
 Using non-parametric test
 Using exact test (12870 partitions)
 Equalities contributed 1/12870 to p-value
-pval: 0.033
+pval: 0.955
 computing effect size...
-esize: 0.861
+esize: -0.850
 Running test weat7b
 Loading BiasDetection/data/weatStereotypes/gender/weat7b.jsonl...
 Computing sentence encodings
@@ -521,9 +520,9 @@ Computing pval...
 Using non-parametric test
 Using exact test (12870 partitions)
 Equalities contributed 1/12870 to p-value
-pval: 0.921
+pval: 0.354
 computing effect size...
-esize: -0.713
+esize: 0.195
 Running test weat8
 Loading BiasDetection/data/weatStereotypes/gender/weat8.jsonl...
 Computing sentence encodings
@@ -534,9 +533,9 @@ Computing pval...
 Using non-parametric test
 Using exact test (12870 partitions)
 Equalities contributed 1/12870 to p-value
-pval: 0.141
+pval: 0.994
 computing effect size...
-esize: 0.521
+esize: -1.185
 Running test weat8b
 Loading BiasDetection/data/weatStereotypes/gender/weat8b.jsonl...
 Computing sentence encodings
@@ -547,11 +546,11 @@ Computing pval...
 Using non-parametric test
 Using exact test (12870 partitions)
 Equalities contributed 1/12870 to p-value
-pval: 0.739
+pval: 0.372
 computing effect size...
-esize: -0.371
-Percentage of p_value <0.05  0.21428571428571427
-Average E-score  0.6879533844144663
+esize: 0.173
+Percentage of p_value <0.05  0.5357142857142857
+Average E-score  1.0138741130467293
 ---------WeatScore(Race)---------
 Running test angry_black_woman_stereotype
 Loading BiasDetection/data/weatStereotypes/race/angry_black_woman_stereotype.jsonl...
@@ -562,9 +561,9 @@ Null hypothesis: no difference between WhiteFemaleNames and BlackFemaleNames in 
 Computing pval...
 Using non-parametric test
 Drawing 99999 samples (and biasing by 1)
-pval: 0.827
+pval: 0.682
 computing effect size...
-esize: -0.352
+esize: -0.181
 Running test angry_black_woman_stereotype_b
 Loading BiasDetection/data/weatStereotypes/race/angry_black_woman_stereotype_b.jsonl...
 Computing sentence encodings
@@ -575,9 +574,9 @@ Computing pval...
 Using non-parametric test
 Using exact test (70 partitions)
 Equalities contributed 1/70 to p-value
-pval: 0.129
+pval: 0.014
 computing effect size...
-esize: 0.940
+esize: 1.444
 Running test sent-angry_black_woman_stereotype
 Loading BiasDetection/data/weatStereotypes/race/sent-angry_black_woman_stereotype.jsonl...
 Computing sentence encodings
@@ -587,9 +586,9 @@ Null hypothesis: no difference between WhiteFemaleNames and BlackFemaleNames in 
 Computing pval...
 Using non-parametric test
 Drawing 99999 samples (and biasing by 1)
-pval: 0.559
+pval: 0.000
 computing effect size...
-esize: -0.020
+esize: 0.739
 Running test sent-angry_black_woman_stereotype_b
 Loading BiasDetection/data/weatStereotypes/race/sent-angry_black_woman_stereotype_b.jsonl...
 Computing sentence encodings
@@ -601,7 +600,7 @@ Using non-parametric test
 Drawing 99999 samples (and biasing by 1)
 pval: 0.000
 computing effect size...
-esize: 0.917
+esize: 0.768
 Running test sent-weat3
 Loading BiasDetection/data/weatStereotypes/race/sent-weat3.jsonl...
 Computing sentence encodings
@@ -611,9 +610,9 @@ Null hypothesis: no difference between EuropeanAmericanNames and AfricanAmerican
 Computing pval...
 Using non-parametric test
 Drawing 99999 samples (and biasing by 1)
-pval: 0.000
+pval: 0.010
 computing effect size...
-esize: 0.361
+esize: 0.205
 Running test sent-weat3b
 Loading BiasDetection/data/weatStereotypes/race/sent-weat3b.jsonl...
 Computing sentence encodings
@@ -625,7 +624,7 @@ Using non-parametric test
 Drawing 99999 samples (and biasing by 1)
 pval: 0.000
 computing effect size...
-esize: 0.366
+esize: 0.702
 Running test sent-weat4
 Loading BiasDetection/data/weatStereotypes/race/sent-weat4.jsonl...
 Computing sentence encodings
@@ -635,9 +634,9 @@ Null hypothesis: no difference between EuropeanAmericanNames and AfricanAmerican
 Computing pval...
 Using non-parametric test
 Drawing 99999 samples (and biasing by 1)
-pval: 0.496
+pval: 0.192
 computing effect size...
-esize: 0.001
+esize: 0.109
 Running test sent-weat5
 Loading BiasDetection/data/weatStereotypes/race/sent-weat5.jsonl...
 Computing sentence encodings
@@ -647,9 +646,9 @@ Null hypothesis: no difference between EuropeanAmericanNames and AfricanAmerican
 Computing pval...
 Using non-parametric test
 Drawing 99999 samples (and biasing by 1)
-pval: 0.963
+pval: 0.000
 computing effect size...
-esize: -0.225
+esize: 0.413
 Running test sent-weat5b
 Loading BiasDetection/data/weatStereotypes/race/sent-weat5b.jsonl...
 Computing sentence encodings
@@ -659,9 +658,9 @@ Null hypothesis: no difference between EuropeanAmericanTerms and AfricanAmerican
 Computing pval...
 Using non-parametric test
 Drawing 99999 samples (and biasing by 1)
-pval: 0.577
+pval: 0.000
 computing effect size...
-esize: -0.020
+esize: 0.439
 Running test weat3
 Loading BiasDetection/data/weatStereotypes/race/weat3.jsonl...
 Computing sentence encodings
@@ -671,9 +670,9 @@ Null hypothesis: no difference between EuropeanAmericanNames and AfricanAmerican
 Computing pval...
 Using non-parametric test
 Drawing 99999 samples (and biasing by 1)
-pval: 0.201
+pval: 0.318
 computing effect size...
-esize: 0.214
+esize: 0.119
 Running test weat3b
 Loading BiasDetection/data/weatStereotypes/race/weat3b.jsonl...
 Computing sentence encodings
@@ -683,9 +682,9 @@ Null hypothesis: no difference between EuropeanAmericanTerms and AfricanAmerican
 Computing pval...
 Using non-parametric test
 Drawing 99999 samples (and biasing by 1)
-pval: 0.068
+pval: 0.791
 computing effect size...
-esize: 0.552
+esize: -0.308
 Running test weat4
 Loading BiasDetection/data/weatStereotypes/race/weat4.jsonl...
 Computing sentence encodings
@@ -695,9 +694,9 @@ Null hypothesis: no difference between EuropeanAmericanNames and AfricanAmerican
 Computing pval...
 Using non-parametric test
 Drawing 99999 samples (and biasing by 1)
-pval: 0.341
+pval: 0.451
 computing effect size...
-esize: 0.152
+esize: 0.044
 Running test weat5
 Loading BiasDetection/data/weatStereotypes/race/weat5.jsonl...
 Computing sentence encodings
@@ -707,9 +706,9 @@ Null hypothesis: no difference between EuropeanAmericanNames and AfricanAmerican
 Computing pval...
 Using non-parametric test
 Drawing 99999 samples (and biasing by 1)
-pval: 0.862
+pval: 0.017
 computing effect size...
-esize: -0.389
+esize: 0.748
 Running test weat5b
 Loading BiasDetection/data/weatStereotypes/race/weat5b.jsonl...
 Computing sentence encodings
@@ -719,11 +718,11 @@ Null hypothesis: no difference between EuropeanAmericanTerms and AfricanAmerican
 Computing pval...
 Using non-parametric test
 Drawing 99999 samples (and biasing by 1)
-pval: 0.207
+pval: 0.994
 computing effect size...
-esize: 0.303
-Percentage of p_value <0.05  0.21428571428571427
-Average E-score  0.5481911271334698
+esize: -0.882
+Percentage of p_value <0.05  0.5714285714285714
+Average E-score  0.6822600589606509
 ---------WeatScore(Religion)---------
 Running test sent-religion1
 Loading BiasDetection/data/weatStereotypes/religion/sent-religion1.jsonl...
@@ -736,7 +735,7 @@ Using non-parametric test
 Drawing 99999 samples (and biasing by 1)
 pval: 0.000
 computing effect size...
-esize: 0.836
+esize: 0.633
 Running test sent-religion1b
 Loading BiasDetection/data/weatStereotypes/religion/sent-religion1b.jsonl...
 Computing sentence encodings
@@ -746,9 +745,9 @@ Null hypothesis: no difference between ChristianityTerms and JewishTerms in asso
 Computing pval...
 Using non-parametric test
 Drawing 99999 samples (and biasing by 1)
-pval: 0.001
+pval: 0.540
 computing effect size...
-esize: 0.475
+esize: -0.016
 Running test sent-religion2
 Loading BiasDetection/data/weatStereotypes/religion/sent-religion2.jsonl...
 Computing sentence encodings
@@ -758,9 +757,9 @@ Null hypothesis: no difference between ChristianityTerms and IslamTerms in assoc
 Computing pval...
 Using non-parametric test
 Drawing 99999 samples (and biasing by 1)
-pval: 0.000
+pval: 0.068
 computing effect size...
-esize: 0.933
+esize: 0.231
 Running test sent-religion2b
 Loading BiasDetection/data/weatStereotypes/religion/sent-religion2b.jsonl...
 Computing sentence encodings
@@ -770,11 +769,11 @@ Null hypothesis: no difference between ChristianityTerms and JewishTerms in asso
 Computing pval...
 Using non-parametric test
 Drawing 99999 samples (and biasing by 1)
-pval: 0.014
+pval: 0.002
 computing effect size...
-esize: 0.336
-Percentage of p_value <0.05  1.0
-Average E-score  0.6452837021475334
+esize: 0.451
+Percentage of p_value <0.05  0.5
+Average E-score  0.5424326102605765
 
 
 
@@ -785,12 +784,12 @@ Average E-score  0.6452837021475334
 ----------------------------------------------------------------------------------------------------
 ### Local Metric2.1: Weat_KL - reflect bias ###
 Fairness(KL) - Simple Context
-avg:  [0.06454085718336389, 0.0649685237588151, 0.0666244566702828, 0.07016285230499872, 0.07503435753244123, 0.07969870108087677, 0.08291398220413948, 0.0845214189473866, 0.0850865906029657, 0.08521675266483433, 0.08522982120563945]
+avg:  [0.1142092061645343, 0.11095918300299004, 0.10188312688298155, 0.08651800844015631, 0.07226138499556581, 0.0637075143601784, 0.05961168704728671, 0.057965770538711534, 0.05742798362806745, 0.0573127454603012, 0.0572999468899989]
 A-subspace
-0.08518774362303676 0.08518774362303676
-0.08479947482006003 0.08479947482006003
+0.05774771891381798 0.05774771891381798
+0.05919482667659295 0.05919482667659295
 Fairness(KL) - Diverse Context
-avg:  [0.031279549337829574, 0.03151814622753271, 0.032401158582829145, 0.0342542878969092, 0.036746702333701906, 0.03903767812450194, 0.0405424339786333, 0.041268323895088235, 0.04152055738178297, 0.041576850928591716, 0.04158304299739832]
+avg:  [0.055185864155269354, 0.05159138060042468, 0.04427791963772291, nan, nan, nan, nan, nan, nan, nan, nan]
 A-subspace
-0.041570498467897087 0.041570498467897087
-0.04152491429004269 0.04152491429004269
+nan nan
+nan nan

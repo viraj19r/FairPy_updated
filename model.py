@@ -7,8 +7,8 @@ from transformers import AutoTokenizer, GPT2LMHeadModel
 def masked_model_metrics(model_name):
     print('---------'+model_name+'---------')
 
-    tokenizer = AutoTokenizer.from_pretrained("emilyalsentzer/Bio_ClinicalBERT")
-    model = BertForMaskedLM.from_pretrained("emilyalsentzer/Bio_ClinicalBERT")
+    tokenizer = AutoTokenizer.from_pretrained(model_name)
+    model = BertForMaskedLM.from_pretrained(model_name)
     maskedObj = BiasDetectionMetrics.MaskedLMBiasDetection(use_pretrained=False, model = model, tokenizer = tokenizer)
 
     print('---------Log Probability(gender)---------')
